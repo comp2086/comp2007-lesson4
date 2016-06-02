@@ -1,4 +1,18 @@
 ﻿<%@ Page Title="Students" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Students.aspx.cs" Inherits="lesson_4.Students" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="row">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+                <asp:GridView CssClass="table table-striped table-bordered table-hover" ID="grdStudents" AutoGenerateColumns="false" runat="server">
+                    <Columns>
+                        <asp:BoundField DataField="StudentID" HeaderText="Student ID" Visible="true" />
+                        <asp:BoundField DataField="LastName" HeaderText="Last Name" Visible="true" />
+                        <asp:BoundField DataField="FirstMidName" HeaderText="First Name" Visible="true" />
+                        <asp:BoundField DataField="EnrollmentDate" HeaderText="Enrollment Date" DataFormatString="{0:MMM dd, yyyy}" Visible="true" />
+                    </Columns>
+                </asp:GridView>
+            </div>
+        </div>
+    </div>
 </asp:Content>
